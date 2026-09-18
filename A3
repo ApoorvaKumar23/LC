@@ -1,0 +1,4 @@
+Create a user analyst1 with default settings and check its entry in /etc/passwd.
+
+cat /etc/passwd
+grep '^analyst1:' /etc/passwd

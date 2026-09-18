@@ -1,0 +1,87 @@
+git add filename
+git commit -m "Add README file"
+git --version
+Create a new Git repository and initialize it using git init. Check repository status.
+mkdir GitProject
+cd GitProject
+git init
+git status
+Create file
+   ↓
+git add
+   ↓
+git commit
+nano README.md
+git status
+git add README.md
+git commit -m "Add README file"
+git status
+
+git branch feature
+git switch feature
+git checkout feature
+
+git diff
+       ↓
+unstaged changes
+
+git diff --staged
+       ↓
+staged changes
+
+git diff
+git diff --staged
+
+Two commits and log:
+git add file2.txt
+git commit -m "Add second file"
+nano README.md
+git add README.md
+git commit -m "Update README"
+git log
+
+Rename current branch to main
+git branch -M main
+git branch
+
+1. Create a new repository on GitHub
+
+Go to GitHub and create a new repository.
+GitHub gives you a URL such as:
+
+https://github.com/YOUR_USERNAME/docker-git-practice.git
+
+Run:
+
+git clone https://github.com/YOUR_USERNAME/docker-git-practice.git
+cd docker-git-practice
+
+git clone https://github.com/YOUR_USERNAME/docker-git-practice.git
+
+cd docker-git-practice
+
+nano README.md
+
+git status
+
+git add .
+
+git commit -m "Add README file"
+
+git push
+
+Branch + merge practical in one block
+git switch -c dev
+
+nano README.md
+
+git add .
+git commit -m "Update README in dev"
+
+git push -u origin dev
+
+git switch main
+
+git merge dev
+
+git push

@@ -1,0 +1,5 @@
+Search for Lambda->Create function->Author from scratch->Function name:my-lambda-s3-function->Runtime:Python 3.11->Create function
+Code: Remove the existing code and copy and paste the code from the next slide->Deploy
+Configuration->Permissions->Click on the Execution role name link->Add permissions->Attach policies->Search for S3->Select AmazonS3FullAccess ->Add permission
+Go to Lambda->Triggers->Add Trigger->Select a source: S3->Bucket:Select your bucket->Leave everything else as default->Acknowledge->Add
+In S3, Click on the Bucket name->Properties->Scroll down->Event notifications will show our Lambda event

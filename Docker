@@ -1,0 +1,59 @@
+docker --version
+docker images
+docker ps
+docker ps -a
+RUN READY-MADE IMAGES
+docker pull ubuntu
+docker run -it ubuntu
+ls
+exit
+Nginx
+docker pull nginx
+docker run -d -p 8080:80 nginx
+http://localhost:8080
+
+Apache:
+docker pull httpd
+docker run -d -p 8081:80 httpd
+http://localhost:8081
+MySQL
+docker pull mysql
+docker run -d --name mysql-container -e MYSQL_ROOT_PASSWORD=root mysql
+docker ps
+
+CHANGE THE HOME PAGE
+docker exec -it CONTAINER_ID /bin/sh
+cd /usr/share/nginx/html
+ls
+echo "Hello from Docker" > /usr/share/nginx/html/index.html
+exit
+
+http://localhost:8080
+
+BUILD YOUR OWN DOCKER IMAGE 
+
+docker pull nginx
+mkdir hello-python
+cd hello-python
+nano Dockerfile
+FROM python:3.12
+
+CMD ["python", "-c", "print('Hello Python')"]
+docker build -t hello-python .
+docker images
+docker run hello-python
+PUSH IMAGE TO DOCKER HUB
+docker build -t hello-python .
+
+docker tag hello-python YOUR_USERNAME/hello-python
+
+docker login
+
+docker push YOUR_USERNAME/hello-python
+11. Stop it
+docker stop CONTAINER_ID
+docker ps
+Remove it
+docker rm CONTAINER_ID
+docker ps
+docker start ID

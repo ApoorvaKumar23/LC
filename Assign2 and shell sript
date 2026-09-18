@@ -1,0 +1,24 @@
+sudo useradd -m username
+id username
+sudo passwd username
+sudo usermod -g group username
+sudo usermod -aG group username
+sudo groupadd group
+groups username
+sudo gpasswd -d username group
+ls -l
+su username
+su - username
+su - username -c "command"
+getfacl file
+setfacl -m u:username:r file
+
+
+Test	Meaning
+-e file	exists
+-f file	regular file
+-d file	directory
+-r file	readable
+-w file	writable
+-x file	executable
+-s file	exists and is not empty
